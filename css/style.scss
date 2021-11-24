@@ -1,0 +1,133 @@
+// ### Primary
+$Bright-orange: hsl(31, 77%, 52%);
+$Dark-cyan: hsl(184, 100%, 22%);
+$Very-dark-cyan: hsl(179, 100%, 13%);
+
+// ### Neutral
+$Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+$Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+// ## Typography
+$Font-size: 15px;
+$Font-family-1: "Big Shoulders Display", cursive;
+$Font-family-2: "Lexend Deca", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btn {
+  font-family: $Font-family-2;
+  border: 2px solid $Very-light-gray-background-headings-buttons;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  margin-top: 3rem;
+  transition: 0.3s ease;
+  background: $Very-light-gray-background-headings-buttons;
+  font-weight: 700;
+
+  &.bt1 {
+    color: $Bright-orange;
+  }
+  &.bt2 {
+    color: $Dark-cyan;
+  }
+  &.bt3 {
+    color: $Very-dark-cyan;
+  }
+
+  &:hover {
+    background: transparent;
+    color: $Very-light-gray-background-headings-buttons;
+  }
+}
+
+.box-container {
+  max-width: 900px;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.box-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3rem;
+
+  h2 {
+    font-family: $Font-family-1;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    color: $Very-light-gray-background-headings-buttons;
+    font-size: 200%;
+    font-weight: 400;
+  }
+  p {
+    padding: 1rem 0;
+    font-family: $Font-family-2;
+    font-size: $Font-size;
+    color: $Transparent-white-paragraphs;
+    line-height: 1.7;
+  }
+
+  &:nth-child(1) {
+    background: $Bright-orange;
+  }
+  &:nth-child(2) {
+    background: $Dark-cyan;
+  }
+  &:nth-child(3) {
+    background: $Very-dark-cyan;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-family: $Font-family-2;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 790px) {
+  main {
+    height: auto;
+    padding: 2%;
+
+    .box-container {
+      max-width: 320px;
+      flex-direction: column;
+
+      .box-item {
+        padding: 2rem;
+        h2 {
+          font-size: 150%;
+          padding: 1rem 0;
+        }
+        p {
+          font-size: 95%;
+          padding: 0.5rem 0;
+        }
+        .btn {
+          margin-top: 2rem;
+          padding: 1rem 1.5rem;
+          font-size: 80%;
+        }
+      }
+    }
+  }
+}
